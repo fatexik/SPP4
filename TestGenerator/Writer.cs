@@ -19,12 +19,12 @@ namespace TestGenerator
             }
         }
 
-        public async Task write(string fileName)
+        public async Task write(TestClassSignature generatedClassCode)
         {
-            string filePath = directoryPath + "\\" + fileName;
+            string filePath = directoryPath + "\\" + generatedClassCode.getTestClassName();
             using (StreamWriter streamWriter = new StreamWriter(filePath))
             {
-                await streamWriter.WriteAsync(fileName); 
+                await streamWriter.WriteAsync(generatedClassCode.getTestClassData()); 
             }
         }
     }
