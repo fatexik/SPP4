@@ -24,7 +24,7 @@ namespace TestGenerator
             string filePath = directoryPath + "\\" + generatedClassCode.getTestClassName();
             using (StreamWriter streamWriter = new StreamWriter(filePath))
             {
-                await streamWriter.WriteAsync(generatedClassCode.getTestClassData()); 
+                await streamWriter.WriteAsync(generatedClassCode.getTestClassData());
             }
         }
     }

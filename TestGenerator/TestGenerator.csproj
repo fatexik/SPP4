@@ -200,8 +200,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reader.cs" />
     <Compile Include="SyntaxTreeInfo.cs" />
+    <Compile Include="TestClassGenerator.cs" />
     <Compile Include="TestClassSignature.cs" />
-    <Compile Include="TestGenerator.cs" />
+    <Compile Include="TestGeneratorClass.cs" />
     <Compile Include="TreeBuilder.cs" />
     <Compile Include="Writer.cs" />
   </ItemGroup>

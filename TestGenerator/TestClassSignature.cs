@@ -20,6 +20,5 @@ namespace TestGenerator
         {
             return this.testClassData;
         }
-        
     }
 }

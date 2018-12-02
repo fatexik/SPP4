@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Linq;
+
 namespace TestGenerator
 {
     public class Produce
@@ -6,7 +9,11 @@ namespace TestGenerator
         {
             TreeBuilder treeBuilder = new TreeBuilder(code);
             SyntaxTreeInfo syntaxTreeInfo = treeBuilder.synteseTreeInfo();
-            return null;
+            
+            TestClassGenerator testClassGenerator = new TestClassGenerator(syntaxTreeInfo);
+            List<TestClassSignature> testTemplates = testClassGenerator.GetTestTemplates();
+            
+            return new TestClassSignature(testTemplates.First().getTestClassName(),testTemplates.First().getTestClassData());
         }
     }
 }

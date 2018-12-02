@@ -1,16 +1,17 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Threading.Tasks.Dataflow;
+using TestGenerator;
 
-namespace TestGenerator
+namespace TestGeneratorClass
 {
-    public class TestGenerator
+    public class TestGeneratorClass
     {
         private Produce produceClass;
         private Reader reader;
         private Writer writer;
 
-        public TestGenerator(string pathOutputDir)
+        public TestGeneratorClass(string pathOutputDir)
         {
             produceClass = new Produce();
             reader = new Reader();
@@ -33,7 +34,7 @@ namespace TestGenerator
                 new TransformBlock<string, TestClassSignature>(s => produceClass.produce(s), processingTaskOptions);
 
             ActionBlock<TestClassSignature> writingBlock =
-                new ActionBlock<TestClassSignature>(genClass => writer.write(genClass).Wait(),outputTaskOptions);
+                new ActionBlock<TestClassSignature>(genClass => writer.write(genClass), outputTaskOptions);
 
             readingBlock.LinkTo(producingBlock, linkOptions);
             producingBlock.LinkTo(writingBlock, linkOptions);
@@ -42,7 +43,7 @@ namespace TestGenerator
             {
                 readingBlock.Post(path);
             }
-            
+
             readingBlock.Complete();
             await writingBlock.Completion;
         }
