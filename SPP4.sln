@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestGenerator", "TestGenera
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console", "Console\Console.csproj", "{B24B5297-46D3-46A4-8126-2A47B3D05EB3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{B89A690A-6F30-42FD-95D2-20D0D37A89D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{B24B5297-46D3-46A4-8126-2A47B3D05EB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B24B5297-46D3-46A4-8126-2A47B3D05EB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B24B5297-46D3-46A4-8126-2A47B3D05EB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B89A690A-6F30-42FD-95D2-20D0D37A89D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B89A690A-6F30-42FD-95D2-20D0D37A89D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B89A690A-6F30-42FD-95D2-20D0D37A89D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B89A690A-6F30-42FD-95D2-20D0D37A89D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
